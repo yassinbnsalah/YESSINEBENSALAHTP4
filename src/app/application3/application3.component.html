@@ -1,7 +1,11 @@
-<h2 class="c1"> afficher tout les elements de tableau avec leux parité</h2>
+
+<h3 [ngStyle]="{color:couleur, 'font-style':style}">
+    2. Affichage des boutons des éléments pairs du tableau </h3>
 <ul>
-    <ng-container *ngFor="let t of tab1">
-        <li *ngIf="t%2==0">{{t}} ce nombre est pair</li>
-        <li *ngIf="t%2!=0">{{t}} ce nombre est impaire </li>
+    <ng-container *ngFor="let t of tab1;index as indice">
+        <li [ngClass]="{'big' :t%2==0,'small': t%2!=0}">{{t}} 
+            <button [ngClass]="{'c1':indice <3,'c2': indice >3}"
+                        (click)="onposition(indice)"> Position </button></li>
+       
     </ng-container>
 </ul>
