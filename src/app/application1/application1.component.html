@@ -10,5 +10,50 @@
 </ul>
 <h1> {{titre}} avec *ngfor</h1>
 <ul>
-    <li *ngFor="let t of tab ;index as indice ; count as compteur"> {{t}} <button (click)="position(indice)"> position</button></li>
+    <li *ngFor="let t of tab ;index as indice ; count as compteur"> {{t}} <button (click)="onposition(indice)"> position</button></li>
 </ul>
+
+
+
+<ul>
+    <li *ngFor="let t of tab ;index as indice ; count as compteur"> {{t}} <button *ngIf="t%2==0"> position</button></li>
+</ul>
+<h2> les elements paire de tableau </h2>
+<ul>
+    <ng-container *ngFor="let t of tab">
+        <li *ngIf="t%2==0">{{t}}</li>
+    </ng-container>
+</ul>
+<h1> application 2</h1>
+<h2> afficher tout les elements de tableau avec leur parité</h2>
+<ul>
+    <ng-container *ngFor="let t of tab">
+        <li *ngIf="t%2==0">{{t}} ce nombre est pair</li>
+        <li *ngIf="t%2!=0">{{t}} ce nombre est impaire </li>
+    </ng-container>
+</ul>
+<h1>application 3 </h1>
+<h3 [ngStyle]="{color:couleur, 'font-style':style}">
+    2. Affichage des boutons des éléments pairs du tableau </h3>
+<ul>
+    <ng-container *ngFor="let t of tab;index as indice">
+        <li [ngClass]="{'big' :t%2==0,'small': t%2!=0}">{{t}} 
+            <button [ngClass]="{'c1':indice <3,'c2': indice >3}"
+                        (click)="onposition(indice)"> Position </button></li>
+       
+    </ng-container>
+</ul>
+<h1> application4</h1>
+<h3> afffichage de deff element de employer</h3>
+<ul>
+    <li> {{employe.nom}}</li>
+    <li> {{employe.prenom}}</li>
+    <li> {{employe.date}}</li>
+    <li> {{employe.salaire}}</li>
+</ul>
+<ul>
+    <li> {{employe.nom |uppercase}}</li>
+    <li> {{employe.prenom | titlecase}}</li>
+    <li> {{employe.date |date:'medium'}}</li>
+    <li> {{employe.salaire |currency}}</li>
+    </ul>
