@@ -1,0 +1,14 @@
+<h1>application 1</h1>
+<h1>{{titre}} sans *ngfor</h1>
+<ul>
+    <li>{{tab[0]}}</li>
+    <li>{{tab[1]}}</li>
+    <li>{{tab[2]}}</li>
+    <li>{{tab[3]}}</li>
+    <li>{{tab[4]}}</li>
+    <li>{{tab[5]}}</li>
+</ul>
+<h1> {{titre}} avec *ngfor</h1>
+<ul>
+    <li *ngFor="let t of tab ;index as indice ; count as compteur"> {{t}} <button (click)="position(indice)"> position</button></li>
+</ul>

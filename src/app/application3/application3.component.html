@@ -1,0 +1,7 @@
+<h2 class="c1"> afficher tout les elements de tableau avec leux parité</h2>
+<ul>
+    <ng-container *ngFor="let t of tab1">
+        <li *ngIf="t%2==0">{{t}} ce nombre est pair</li>
+        <li *ngIf="t%2!=0">{{t}} ce nombre est impaire </li>
+    </ng-container>
+</ul>
