@@ -1,0 +1,10 @@
+<h3>{{titre}}</h3>
+<div class="container">
+    <ul>
+    <ng-container *ngFor="let t of materiels">
+        <li *ngIf="t.quantite>0"> <img src="{{t.photo}}"> {{t.libelle|uppercase}} <span class="badge-pill" [ngClass]="{'badge-primary fa fa-thumbs-up ':t.hautGamme==true,
+                                                                                                                        'badge-dark' :t.hautGamme==false}">price :{{t.prix}}</span></li>
+
+    </ng-container>
+    </ul>
+</div>
