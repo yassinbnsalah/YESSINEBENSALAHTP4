@@ -7,6 +7,7 @@ import { TransformingPipe } from './transforming.pipe';
 import { AccueilComponent } from './accueil/accueil.component';
 import { ListematrielComponent } from './listematriel/listematriel.component';
 import { MaterielComponent } from './materiel/materiel.component';
+import { DetailmaterielComponent } from './detailmateriel/detailmateriel.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { MaterielComponent } from './materiel/materiel.component';
     TransformingPipe,
     AccueilComponent,
     ListematrielComponent,
-    MaterielComponent
+    MaterielComponent,
+    DetailmaterielComponent
   
   ],
   imports: [
