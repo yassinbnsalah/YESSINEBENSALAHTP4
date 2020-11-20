@@ -6,6 +6,7 @@ import { Application1Component } from './application1/application1.component';
 import { TransformingPipe } from './transforming.pipe';
 import { AccueilComponent } from './accueil/accueil.component';
 import { ListematrielComponent } from './listematriel/listematriel.component';
+import { MaterielComponent } from './materiel/materiel.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { ListematrielComponent } from './listematriel/listematriel.component';
     Application1Component,
     TransformingPipe,
     AccueilComponent,
-    ListematrielComponent
+    ListematrielComponent,
+    MaterielComponent
   
   ],
   imports: [

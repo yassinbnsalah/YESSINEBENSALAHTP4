@@ -1,10 +1,13 @@
 <h3>{{titre}}</h3>
 <div class="container">
-    <ul>
-    <ng-container *ngFor="let t of materiels">
-        <li *ngIf="t.quantite>0"> <img src="{{t.photo}}"> {{t.libelle|uppercase}} <span class="badge-pill" [ngClass]="{'badge-primary fa fa-thumbs-up ':t.hautGamme==true,
-                                                                                                                        'badge-dark' :t.hautGamme==false}">price :{{t.prix}}</span></li>
-
-    </ng-container>
-    </ul>
+    <div class="row">
+        <ng-container  *ngFor="let t of materiels">
+            <ng-container *ngIf="t.quantite>0">
+                <div  class="col">
+                    <YES-materiel [mat]="t"></YES-materiel>
+                </div>
+            </ng-container>
+     
+        </ng-container>
+    </div>
 </div>
