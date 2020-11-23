@@ -18,13 +18,7 @@ export class Commentaire {
   public set auteur(value: string) {
     this._auteur = value;
   }
-  /*public get date(): Date {
-    return this.date;
-  }
-  public set date(value: Date)
-  {
-    this._date = value; 
-  }*/
+ 
  
   constructor (private _contenu : string, private _note : number ,private _auteur :string){ }  
 }

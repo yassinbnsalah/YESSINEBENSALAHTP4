@@ -13,6 +13,9 @@
                 </p>
             </div>
             <div class="card-footer c1 c2 ">
-                <a href="#" class="btn btn-primary"> details</a> 
+                <button class="btn btn-primary" (click)="onshow()"> details</button> 
+                <div *ngIf="!showing">
+                <YES-detailmateriel [det] = "mat">  </YES-detailmateriel>
+                </div>
             </div>
-</div>
+</div> 

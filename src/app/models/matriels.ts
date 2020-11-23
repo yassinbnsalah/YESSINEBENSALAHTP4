@@ -62,14 +62,14 @@ export class Materiel {
   {
     this._hautGamme = value 
   }
- /* private get commentaires(): Commentaire{
+  public get commentaires(): Commentaire{
     return this._commentaires; 
   }
-  private set commentaires(value: Commentaire)
+  public set commentaires(value: Commentaire)
   {
     this._commentaires = value; 
-  }*/
-  constructor(public _id: string, public _libelle: string, public _photo: string, public _marque: string, public _prix: number, public _description: string , public _hautGamme : boolean , public _quantite : number /*, private _commentaires : Commentaire*/) {
+  }
+  constructor(public _id: string, public _libelle: string, public _photo: string, public _marque: string, public _prix: number, public _description: string , public _hautGamme : boolean , public _quantite : number , public _commentaires : Commentaire) {
     
   }
 

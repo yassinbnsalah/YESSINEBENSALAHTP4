@@ -1,1 +1,11 @@
-<p>detailmateriel works!</p>
+
+<h1> Detail de {{det.libelle}} {{det.id}}</h1>
+<ul class="list-group"> 
+   
+    <li class="list-group-item"> marque {{det.marque}} </li>
+    <li class="list-group-item"> prix {{det.prix}} </li>
+    <li class="list-group-item"> description {{det.description}}</li>
+    <li class="list-group-item"> quantite {{det.quantite}}</li>
+    <li class="list-group-item"> <input type="checkbox" [checked] ="det.hautGamme"> hout de gamme </li>
+    <a class="btn btn-primary"> afficher les commentaires</a>
+</ul>
