@@ -8,8 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./materiel.component.css']
 })
 export class MaterielComponent implements OnInit {
-  @Input() com: Commentaire = new Commentaire("", 0,""); 
-  @Input() mat: Materiel = new Materiel("", "", "", "", 0, "", false, 0,this.com);
+ // @Input() com: Commentaire[];
+  @Input() mat: Materiel = new Materiel();
   showing:boolean = true; 
   constructor() { }
   onshow()

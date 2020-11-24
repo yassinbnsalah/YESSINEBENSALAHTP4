@@ -7,5 +7,10 @@
     <li class="list-group-item"> description {{det.description}}</li>
     <li class="list-group-item"> quantite {{det.quantite}}</li>
     <li class="list-group-item"> <input type="checkbox" [checked] ="det.hautGamme"> hout de gamme </li>
-    <a class="btn btn-primary"> afficher les commentaires</a>
+   <!-- <li class="list-group-item"> {{det.commentaires.note}} </li>-->
+    <button class="btn btn-primary" (click)="onshow()"> afficher les commentaires</button>
+    <div *ngIf="!showing">
+    <!---->
+    <YES-comment [com] = "det.commentaires"></YES-comment>
+    </div>
 </ul>
